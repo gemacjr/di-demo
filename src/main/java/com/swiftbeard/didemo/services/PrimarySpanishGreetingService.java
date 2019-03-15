@@ -1,16 +1,18 @@
 package com.swiftbeard.didemo.services;
 
+
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
+@Profile("es")
 @Primary
-@Profile("en")
-public class PrimaryGreetingService implements GreetingService{
+public class PrimarySpanishGreetingService implements GreetingService {
 
     @Override
-    public String sayGreeting() {
-        return "Hello - Primary Greeting Service";
+    public String sayGreeting(){
+        return "Servicio de Saludo Primario";
     }
 }
